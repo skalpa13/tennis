@@ -21,7 +21,7 @@
 
   <body>
 
-  	<!-- admin admin -->
+  	<!-- admin admin s-->
     <div class="container">
 
       <form name="frmLogin" id="frmLogin" class="form-signin" action="Controleur?page=login" method="post">
