@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource
+	name="jdbc/acosparla_tennis"
+	type="javax.sql.DataSource"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	password="marseille"
+	maxIdle="2"
+	maxWait="5000"
+	username="acosparla"
+	url="jdbc:mysql://mysql-acosparla.alwaysdata.net:3306/acosparla_tennis?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"
+	maxActive="4"/>
+
+</Context>
+
+
+
+		
