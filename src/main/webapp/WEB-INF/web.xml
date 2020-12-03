@@ -1,7 +1,138 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>RollandGarros</display-name>
+  <context-param>
+    <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+    <param-value>i18n.message_fr</param-value>
+  </context-param>
+  
+ <welcome-file-list>
+<welcome-file>login.jsp</welcome-file>
+ 
+</welcome-file-list>
+  
+ 
+  
+  <servlet>
+    <display-name>Controleur</display-name>
+    <servlet-name>Controleur</servlet-name>
+    <servlet-class>controle.Controleur</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Controleur</servlet-name>
+    <url-pattern>/Controleur</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>CtlLogin</display-name>
+    <servlet-name>CtlLogin</servlet-name>
+    <servlet-class>controle.CtlLogin</servlet-class>
+ 	<init-param>
+		<param-name>bddtype</param-name>
+		<param-value>1</param-value>
+	</init-param>
+ 
+ 
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CtlLogin</servlet-name>
+    <url-pattern>/CtlLogin</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <description></description>
+    <display-name>CtlDeconnexion</display-name>
+    <servlet-name>CtlDeconnexion</servlet-name>
+    <servlet-class>controle.CtlDeconnexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CtlDeconnexion</servlet-name>
+    <url-pattern>/CtlDeconnexion</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CtlJoueur</display-name>
+    <servlet-name>CtlJoueur</servlet-name>
+    <servlet-class>controle.CtlJoueur</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CtlJoueur</servlet-name>
+    <url-pattern>/CtlJoueur</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CtlInitialisation</display-name>
+    <servlet-name>CtlInitialisation</servlet-name>
+    <servlet-class>controle.CtlInitialisation</servlet-class>
+   	<init-param>
+		<param-name>bddtype</param-name>
+		<param-value>1</param-value>
+	</init-param>
+	 <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CtlInitialisation</servlet-name>
+    <url-pattern>/CtlInitialisation</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CtlArbitre</display-name>
+    <servlet-name>CtlArbitre</servlet-name>
+    <servlet-class>controle.CtlArbitre</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CtlArbitre</servlet-name>
+    <url-pattern>/CtlArbitre</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CtlCourt</display-name>
+    <servlet-name>CtlCourt</servlet-name>
+    <servlet-class>controle.CtlCourt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CtlCourt</servlet-name>
+    <url-pattern>/CtlCourt</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CtlMatch</display-name>
+    <servlet-name>CtlMatch</servlet-name>
+    <servlet-class>controle.CtlMatch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CtlMatch</servlet-name>
+    <url-pattern>/CtlMatch</url-pattern>
+  </servlet-mapping>
+ 
+ 
+   <servlet>
+    <description></description>
+    <display-name>CtlResultat</display-name>
+    <servlet-name>CtlResultat</servlet-name>
+    <servlet-class>controle.CtlResultat</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CtlResultat</servlet-name>
+    <url-pattern>/CtlResultat</url-pattern>
+  </servlet-mapping>
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+ 
+ 
+   
+ <error-page>
+  <error-code>404</error-code>
+  <location>/erreur.html</location>
+ </error-page>
+ <error-page>
+  <error-code>500</error-code>
+  <location>/erreur.jsp</location>
+ </error-page>
+  <resource-ref>
+	<description>DataSource Reference</description>
+	<res-ref-name>jdbc/acosparla_tennis</res-ref-name>
+	<res-type>javax.sql.DataSource</res-type>
+	<res-auth>Container</res-auth>
+</resource-ref>
 </web-app>
