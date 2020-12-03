@@ -1,0 +1,63 @@
+@CHARSET "ISO-8859-1";
+h1{color:#df6c20;}
+body{font-family:"Lucida Sans Unicode"}
+label{display:block;float:left;width:150px;}
+input{display:block;}
+
+#entete{margin-bottom:75px;}
+#logo{display:inline; float:left;margin-right:30px;}
+#titreEntete{display:inline;margin-top:30px;}
+
+.lien{width:250px;height:200px;}
+
+.container img {
+    float: left;
+    margin: 0 10px;
+}
+.erreur{color: red;
+ 
+}
+
+input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    width: 200px;
+    height: 27px;
+}
+input[type="checkbox"] {
+	width : auto;
+	display : inline;
+	height: auto;
+	margin-right : 2px;
+}
+
+
+
+input[type="radio"] {
+	width : auto;
+	display : inline;
+	height: auto;
+	margin-right : 2px;
+}
+footer {
+    margin-top: 20px;
+}
+
+table {
+	 border: 5px solid green;   
+}
+hr	 { font-size:larger; }
+
+th
+{
+   text-align: center;
+   padding: 10px 40px 10px 40px;
+   border: 1px solid blue;
+}
+td
+{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid blue;
+   }
