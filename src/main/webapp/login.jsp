@@ -29,7 +29,7 @@
         
           <input type="text" name="txNomUser" id="txNomUser" class="form-control" placeholder="<fmt:message key="votreNom" />" required autofocus>
         
-          <input type="password" name="txMdpUser" id="txMdpUser" class="form-control" placeholder="<fmt:message key="Mdp" />" required>
+          <input type="password" name="txMdpUser" id="txMdpUser" class="form-control" placeholder="<fmt:message key="votreMdp" />" required>
         
           <input type="checkbox" value="remember-me" name="ckSouvenir" id="ckSouvenir">&nbsp;<fmt:message key="rememberMe" />
          
