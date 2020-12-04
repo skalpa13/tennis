@@ -34,7 +34,7 @@ public Connection getConnection()  {
         connexion.setAutoCommit(false);
 	} catch (Exception e) {
 		//throw new DAOException("Connexion impossible.", e);
-	    System.out.println("Connexion impossible: "+ e.getMessage());
+	    System.out.println("echec Connection: "+ e.getMessage()); //herou java.lang.NullPointerException
 	}
    	return connexion;
 }

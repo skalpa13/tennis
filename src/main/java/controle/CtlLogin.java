@@ -2,7 +2,7 @@ package controle;
 
 import java.io.IOException;
 import java.sql.Connection;
-
+import java.sql.DriverManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +31,14 @@ public class CtlLogin extends HttpServlet {
 		try {
 			
 			DaoFactory maFactory =  DaoFactory.getDaoFactory(Integer.parseInt(getInitParameter("bddtype")));//1 -> mysql
-				
+			/*test connection 
+			   Class.forName("com.mysql.cj.jdbc.Driver");
+			    String url = "jdbc:mysql://mysql-acosparla.alwaysdata.net:3306/tennis?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; 
+			
+			    Connection  connectJavaSql = DriverManager.getConnection(url,"acosparla","marseille");
+
+			  fin test connection */ 
+			
 		//	DaoFactory maFactory =  DaoFactory.getDaoFactory(1);
 			//	Connection connexion = maFactory.getConnection();
 	//		if(connexion != null)
