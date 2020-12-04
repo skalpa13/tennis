@@ -3,6 +3,7 @@ package dao;
 
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
@@ -28,10 +29,21 @@ public abstract class DaoFactory {
 
 /* Méthode chargée de fournir une connexion à la base de données */
 public Connection getConnection()  {
+
+	
 	Connection connexion = null;
 	try {
-       	connexion = ds.getConnection();
-        connexion.setAutoCommit(false);
+    //   	connexion = ds.getConnection();
+    //    connexion.setAutoCommit(false);
+	
+		   Class.forName("com.mysql.cj.jdbc.Driver");
+		    String url = "jdbc:mysql://mysql-acosparla.alwaysdata.net:3306/tennis?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; 
+		
+		    connexion = DriverManager.getConnection(url,"acosparla","marseille");
+
+	
+	
+	
 	} catch (Exception e) {
 		//throw new DAOException("Connexion impossible.", e);
 	    System.out.println("echec Connection: "+ e.getMessage()); //herou java.lang.NullPointerException
