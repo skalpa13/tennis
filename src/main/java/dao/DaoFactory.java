@@ -37,7 +37,7 @@ public Connection getConnection()  {
     //    connexion.setAutoCommit(false);
 	
 		   Class.forName("com.mysql.cj.jdbc.Driver");
-		    String url = "jdbc:mysql://mysql-acosparla.alwaysdata.net:3306/tennis?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; 
+		    String url = "jdbc:mysql://mysql-acosparla.alwaysdata.net:3306/acosparla_tennis?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; 
 		
 		    connexion = DriverManager.getConnection(url,"acosparla","marseille");
 
