@@ -44,10 +44,10 @@ public class CtlInitialisation extends HttpServlet {
 		  // choix du ttype de la bdd (mysql) se parametre dans le fichier web.xml
 			 maFactory =  DaoFactory.getDaoFactory(Integer.parseInt(getInitParameter("bddtype")));//1 -> mysql
 			
-		//	 JoueurDAO joueurDAO = maFactory.getJoueurDAO();
+			 JoueurDAO joueurDAO = maFactory.getJoueurDAO();
 			/*permet d'afficher une liste d'objet sur la page page jsp correspoondant au ttype d'objet enrgistreer des joueurs -> liste des joueurs  */
-	//		joueurDAO.findAll();
-	//		context.setAttribute("joueurDAO", joueurDAO);
+			joueurDAO.findAll();
+			context.setAttribute("joueurDAO", joueurDAO);
 			
 			ArbitreDAO arbitreDAO = maFactory.getArbitreDAO();
 			arbitreDAO.findAll();
