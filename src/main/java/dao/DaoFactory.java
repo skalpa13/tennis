@@ -33,14 +33,14 @@ public Connection getConnection()  {
 	
 	Connection connexion = null;
 	try {
-    //   	connexion = ds.getConnection();
-    //    connexion.setAutoCommit(false);
-	
+    //   	connexion = ds.getConnection(); commentaire le 04/12/2020 herou java.lang.NullPointerException voire line 49
+   
 		   Class.forName("com.mysql.cj.jdbc.Driver");
 		    String url = "jdbc:mysql://mysql-acosparla.alwaysdata.net:3306/acosparla_tennis?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"; 
 		
 		    connexion = DriverManager.getConnection(url,"acosparla","marseille");
-
+		     connexion.setAutoCommit(false); 
+			
 	
 	
 	
