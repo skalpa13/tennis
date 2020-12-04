@@ -52,7 +52,11 @@ public class CtlMatch extends HttpServlet {
 			  // choix du ttype de la bdd (mysql) se parametre dans le fichier web.xml
 			//	 maFactory =  DaoFactory.getDaoFactory(Integer.parseInt(getInitParameter("bddtype")));// numberformatexception  
 				 maFactory =  DaoFactory.getDaoFactory(1);//1 -> mysql	
-				//liste des tableaux 
+				//m.a.j page jsp de la liste des matchs 
+				 MatchDAO matchDAO = maFactory.getMatchDAO();
+				 matchDAO.findAll();
+				 context.setAttribute("matchDAO", matchDAO);
+				 //liste des tableaux 
 				TypeTableauDAO tabDAO = maFactory.getTypeTableauDAO();
 				tabDAO.findAll();//remplit la liste 
 				context.setAttribute("tabDAO", tabDAO);	
