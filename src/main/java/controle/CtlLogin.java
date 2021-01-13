@@ -22,10 +22,7 @@ public class CtlLogin extends HttpServlet {
         super();
         
     }
-    protected void init(HttpServletRequest req, HttpServletResponse res)
-    {
-    	req.setAttribute("messageErreurLogin", "");
-    }
+   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	}
@@ -59,7 +56,7 @@ public class CtlLogin extends HttpServlet {
 			else
 			{
 				request.setAttribute("acces", false);
-				request.setAttribute("messageErreurLogin", "login failed");
+				request.setAttribute("messageErreurLogin", "login failed try again");
 			}
 		} 
 		catch (Exception e) {
