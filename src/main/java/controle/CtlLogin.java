@@ -54,7 +54,7 @@ public class CtlLogin extends HttpServlet {
 			else
 			{
 				request.setAttribute("acces", false);
-				request.setAttribute("messageErreurLogin", "Acces application interdit");
+				request.setAttribute("messageErreurLogin", "login failed");
 			}
 		} 
 		catch (Exception e) {
