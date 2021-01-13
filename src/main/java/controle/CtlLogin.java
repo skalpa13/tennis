@@ -20,13 +20,18 @@ public class CtlLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     public CtlLogin() {
         super();
+        
     }
-
+    protected void init(HttpServletRequest req, HttpServletResponse res)
+    {
+    	req.setAttribute("messageErreurLogin", "");
+    }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	}
     //form login.jsp submit type post  le login existe deja dans la table select 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)  {
+		
 		
 		try {
 			
