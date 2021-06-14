@@ -1,7 +1,6 @@
-<!--modif 05/2021 deploiement sur serveur heroku  
-1) compte heroku recovery number ??? le 24/04/21 
+<!-- modif 05/2021 deploiement sur serveur heroku  
 http://tennismaven.herokuapp.com/
-
+test en local :  http://localhost:8080/tennis/ -->
 
 <!DOCTYPE html>
 <html lang="en">

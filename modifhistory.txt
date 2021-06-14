@@ -8,5 +8,8 @@ fichier dao/DaoFactory :
 		    connexion = DriverManager.getConnection(url,"acosparla","marseille");
 		     connexion.setAutoCommit(false); 
 		   
-test en local :  http://localhost:8080/tennis/
-		
+
+le 14/06/21
+html5 required sur les formulaires d'insertion dans les pages enregistrement*.jsp 
+test insert court de tennis :sur alaways data insert un champ null malgre  not null
+	

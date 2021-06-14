@@ -39,7 +39,7 @@
 
 	    <form name="frmCourt" id="frmCourt" action="Controleur?page=enrAutreCourt" method="post">
 			<p><label><fmt:message key="nom" /></label>
-			<input type='text' name='txNomCourt' id='txNomCourt' ></p>
+			<input type='text' name='txNomCourt' id='txNomCourt' required ></p>
 			<p><button type='submit' class="btn btn-lg btn-primary" ><fmt:message key="enregistrerCourt" /></button></p>
 		</form>
 		
