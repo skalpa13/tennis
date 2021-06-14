@@ -39,9 +39,9 @@
 
 	    <form name="frmArbitre" id="frmArbitre" action="Controleur?page=enrAutreArbitre" method="post">
 			<p><label><fmt:message key="nom" /></label>
-			<input type='text' name='txNomArbitre' id='txNomArbitre' ></p>
+			<input type='text' name='txNomArbitre' id='txNomArbitre' required ></p>
 			<p><label><fmt:message key="prenom" /></label>
-			<input type='text' name='txPrenomArbitre' id='txPrenomArbitre'></p>
+			<input type='text' name='txPrenomArbitre' id='txPrenomArbitre' required></p>
 			<p><label><fmt:message key="nation" /></label>
 			<select name='cbNationArbitre' id='cbNationArbitre'>
  				<%@ include file="/nations.html" %>			

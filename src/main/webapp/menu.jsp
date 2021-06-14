@@ -33,7 +33,11 @@
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
-            <div class="row">
+          <div class="jumbotron">
+            <h1><fmt:message key="menuGeneral" /></h1>
+            <p><fmt:message key="petitTexte" /></p>
+          </div>
+          <div class="row">
             <div class="col-xs-6 col-lg-4">
               <h2><fmt:message key="enrJoueur" /></h2>
               <a href="Controleur?page=enrJoueur">
@@ -89,6 +93,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="offcanvas.js"></script>
+    <script src="js/offcanvas.js"></script>
   </body>
 </html>

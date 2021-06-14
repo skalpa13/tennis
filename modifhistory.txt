@@ -7,4 +7,6 @@ fichier dao/DaoFactory :
 		
 		    connexion = DriverManager.getConnection(url,"acosparla","marseille");
 		     connexion.setAutoCommit(false); 
+		   
+test en local :  http://localhost:8080/tennis/
 		
