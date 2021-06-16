@@ -6,8 +6,8 @@ import entites.Court;
 import exception.DAOException;
 
 public interface CourtDAO {
-	public void ajouterCourt(Court unCourt)  throws DAOException;
+	public int ajouterCourt(Court unCourt) ;
 	public void supprimerCourt(int idCourt) throws DAOException;
 	public Court findByRef (int id) throws DAOException;
-	public Collection<Court> findAll()  throws DAOException;	
+	public Collection<Court> findAll()  ;	
 }

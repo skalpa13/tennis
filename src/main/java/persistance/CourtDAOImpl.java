@@ -21,22 +21,22 @@ public class CourtDAOImpl implements CourtDAO {
 	private final String VALUES_INSERT = "(?)";
 	private final String ORDRE_DELETE = "delete from court where numero = ";
 	private final String ORDRE_FINDALL = "select numero,nom from court";
-	private final String ORDRE_FINDBYREF = "select numero,nom"
-			+ " from court where numero = ?";
+	private final String ORDRE_FINDBYREF = "select numero,nom from court where numero = ?";
 
     private MysqlDaoFactory daoFactory;
 
 	public CourtDAOImpl(MysqlDaoFactory daoFactory) {
 		listeCourts = new ArrayList<Court>();
 		this.daoFactory = daoFactory;
+		
 	}
 	
-	public void ajouterCourt(Court unCourt) throws DAOException{
+	public int ajouterCourt(Court unCourt) {
 		ResultSet rs = null;
 		Connection connexion = null;
 		try {
 			connexion = daoFactory.getConnection();
-			getListeCourts().add(unCourt);
+		
 			PreparedStatement pst = connexion.prepareStatement(ORDRE_INSERT + VALUES_INSERT, Statement.RETURN_GENERATED_KEYS);
 			System.out.println("pst: "+ pst);
 			pst.setString(1, unCourt.getNom());
@@ -46,17 +46,16 @@ public class CourtDAOImpl implements CourtDAO {
 			rs = pst.getGeneratedKeys();
 			if (rs.next()){
 				unCourt.setNumero(rs.getInt(1));
-			} else {
-				throw new DAOException("Erreur création d'un court. " );
 			}
 			connexion.commit();
 		//	daoFactory.closeConnexion(connexion);
 		} catch (SQLException e) {
-			System.out.println(e.getErrorCode());
-			if(e.getErrorCode()==1062)
-                  throw new DAOException("Erreur création d'un court: doublon " );
 			
+			System.out.println("msg : " + e.getMessage() +" code error: "+ e.getErrorCode());
+			return e.getErrorCode(); 
 		}
+		getListeCourts().add(unCourt);
+		return -1;
 	}
 	
 	public void supprimerCourt(int idCourt) throws DAOException{
@@ -94,7 +93,7 @@ public class CourtDAOImpl implements CourtDAO {
 		}
 		return unCourt;
 	}
-	public Collection<Court> findAll()  throws DAOException{	
+	public Collection<Court> findAll() {	
 		Connection connexion = null;
 		try {
 			connexion = daoFactory.getConnection();
@@ -103,7 +102,7 @@ public class CourtDAOImpl implements CourtDAO {
 			listeCourts.removeAll(listeCourts);
 			resultSetToArrayList(resultSet);
 		} catch (SQLException e) {
-			throw new DAOException(e);
+			
 		} finally {
 		//	daoFactory.closeConnexion(connexion);
 		}

@@ -25,6 +25,9 @@
 	
 	<a href="CtlJoueur">Back to Insert Player</a>
 	<a href="CtlMatch"> Back to Insert Match</a>
+	<a href="CtlCourt"> Back to Insert Court</a>
+
+
 	
   	<%@ include file="/piedDePage.jsp" %>	
 

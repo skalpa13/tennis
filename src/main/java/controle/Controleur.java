@@ -64,7 +64,8 @@ public class Controleur extends HttpServlet {
 			}
 			else if  ("enrJoueur".equals(page) ) {
 					// Après avoir enregistré un joueur, on revient à la page d'enregistrement de joueur
-					dispatch = context.getRequestDispatcher("/CtlJoueur");
+				
+				   dispatch = context.getRequestDispatcher("/CtlJoueur");
 					dispatch.include(request,response);
 				
 			}
