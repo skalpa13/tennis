@@ -22,11 +22,11 @@
   <body>
   	 <p class="erreur">${requestScope.messageInsert}</p>
 		
-	<li>
-	 <ul><a href="CtlJoueur">Back to Insert Player</a></ul>
-	 <ul><a href="CtlMatch"> Back to Insert Match</a></ul>
-	 <ul><a href="CtlCourt"> Back to Insert Court</a></ul>
-    </li>
+	<ul>
+	 <li><a href="CtlJoueur">Back to Insert Player</a></li>
+	 <li><a href="CtlMatch"> Back to Insert Match</a></li>
+	 <li><a href="CtlCourt"> Back to Insert Court</a></li>
+    </ul>
 
 	
   	<%@ include file="/piedDePage.jsp" %>	
