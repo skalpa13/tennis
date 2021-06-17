@@ -15,7 +15,8 @@ input{display:block;}
     margin: 0 10px;
 }
 .erreur{
-	color: red;
+    color: red;
+    margin: 0 10px;
  
 }
 

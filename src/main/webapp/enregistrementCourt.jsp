@@ -42,7 +42,7 @@
 			<input type='text' name='txNomCourt' id='txNomCourt' required ></p>
 			<p><button type='submit' class="btn btn-lg btn-primary" ><fmt:message key="enregistrerCourt" /></button></p>
 		</form>
-		
+		 	<p class="erreur">${requestScope.msgInsert}</p>
 		</div>
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">

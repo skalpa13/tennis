@@ -83,12 +83,14 @@ public class Controleur extends HttpServlet {
 			}
 			else if  ("enrCourt".equals(page) ) {
 					// Lorsque l'utilisateur clique sur enregistrer un court dans le menu
-					dispatch = context.getRequestDispatcher("/enregistrementCourt.jsp");
+				    System.out.println("Controler enrCourt");
+				    dispatch = context.getRequestDispatcher("/enregistrementCourt.jsp");
 					dispatch.forward(request,response);
 			}
 			else if  ("enrAutreCourt".equals(page) ) {
 					// Après avoir enregistré un court, on revient à la page d'enregistrement de court
-					dispatch = context.getRequestDispatcher("/CtlCourt");
+					System.out.println("Controler enrAutreCourt");
+				    dispatch = context.getRequestDispatcher("/CtlCourt");
 					dispatch.include(request,response);
 					dispatch = context.getRequestDispatcher("/enregistrementCourt.jsp");
 					dispatch.forward(request,response);

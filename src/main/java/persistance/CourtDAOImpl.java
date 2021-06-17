@@ -5,8 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 import java.util.ArrayList;
-import java.util.Collection;
+
 
 import dao.CourtDAO;
 import dao.MysqlDaoFactory;
@@ -16,7 +17,7 @@ import exception.DAOException;
 
 public class CourtDAOImpl implements CourtDAO {
 	
-	private ArrayList<Court> listeCourts;
+	private List<Court> listeCourts;
 	private final String ORDRE_INSERT = "insert into court(Nom) values ";
 	private final String VALUES_INSERT = "(?)";
 	private final String ORDRE_DELETE = "delete from court where numero = ";
@@ -51,6 +52,7 @@ public class CourtDAOImpl implements CourtDAO {
 		//	daoFactory.closeConnexion(connexion);
 		} catch (SQLException e) {
 			
+			//add unique key sur le champ nom code erreur renvoyé 
 			System.out.println("msg : " + e.getMessage() +" code error: "+ e.getErrorCode());
 			return e.getErrorCode(); 
 		}
@@ -93,7 +95,7 @@ public class CourtDAOImpl implements CourtDAO {
 		}
 		return unCourt;
 	}
-	public Collection<Court> findAll() {	
+	public List<Court> findAll() {	
 		Connection connexion = null;
 		try {
 			connexion = daoFactory.getConnection();
@@ -110,7 +112,7 @@ public class CourtDAOImpl implements CourtDAO {
 	}
 	
 
-	public Collection<Court> getListeCourts() {
+	public List<Court> getListeCourts() {
 		return listeCourts;
 	}
 
