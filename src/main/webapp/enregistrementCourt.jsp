@@ -42,7 +42,7 @@
 			<input type='text' name='txNomCourt' id='txNomCourt' required ></p>
 			<p><button type='submit' class="btn btn-lg btn-primary" ><fmt:message key="enregistrerCourt" /></button></p>
 		</form>
-		 	<p class="erreur">${requestScope.msgInsert}</p>
+		 	<span class="erreurfadeout">${requestScope.msgInsert}</span>
 		</div>
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
@@ -68,5 +68,10 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/offcanvas.js"></script>
+    <script  src="js/fadeOut.js"></script>
+   
+    
+    
+    
   </body>
 </html>

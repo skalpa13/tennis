@@ -26,10 +26,10 @@ public class CtlCourt extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	    System.out.println("doGet");
+		//never pass by this method do get 
+	   /* System.out.println("doGet");
 		RequestDispatcher dispatch = request.getRequestDispatcher("/enregistrementCourt.jsp");
-		dispatch.forward(request,response);
+		dispatch.forward(request,response);*/
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -42,17 +42,15 @@ public class CtlCourt extends HttpServlet {
 			request.setAttribute("msgInsert", "nom de court :  deja saisie");
 		}
 		else {
-			request.setAttribute("msgInsert", "success");
+			request.setAttribute("msgInsert", "insert with success");
 		}
 		
-		ServletContext context = getServletContext();
-		CourtDAO courtDAO = (CourtDAO) context.getAttribute("courtDAO");
 		
-		listeCourts = courtDAO.findAll();
-		
-		request.setAttribute("list",listeCourts);
-	//	rd = request.getRequestDispatcher("/enregistrementCourt.jsp"); 
-    //    rd.forward(request, response);	
+		//la liste m.a.J  avec new  insert  le param list contentant cette nouvelle liste est transmis à la page JSP enregistrementCourt.jsp
+		//modif juin 2021   <form  action="Controleur?page=enrAutreCourt" mthod  getRequestDispatcher est utilisé dans le controleur 
+		//commentez les lignes ci dessous pour eviter exception 
+		//	rd = request.getRequestDispatcher("/enregistrementCourt.jsp"); 
+        //   rd.forward(request, response);	
 		
 		
 		

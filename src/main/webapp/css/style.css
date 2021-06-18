@@ -14,11 +14,13 @@ input{display:block;}
     float: left;
     margin: 0 10px;
 }
-.erreur{
+.erreurfadeout{
     color: red;
-    margin: 0 10px;
- 
+   
 }
+
+
+
 
 input, optgroup, select, textarea {
     margin: 0;

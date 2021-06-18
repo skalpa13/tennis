@@ -15,4 +15,8 @@ test insert court de tennis :sur alaways data insert un champ null malgre  not n
 
 
 le 16/06 
-sur always data dbb acosparla_tennis	altert table court nom unique 
+sur always data dbb acosparla_tennis	alter table court nom add unique
+
+le 17/06 
+CtlCourt: 
+  modif methode addCourt,   
