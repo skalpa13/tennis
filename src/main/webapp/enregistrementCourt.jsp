@@ -40,9 +40,12 @@
 	    <form name="frmCourt" id="frmCourt" action="Controleur?page=enrAutreCourt" method="post">
 			<p><label><fmt:message key="nom" /></label>
 			<input type='text' name='txNomCourt' id='txNomCourt' required ></p>
-			<p><button type='submit' class="btn btn-lg btn-primary" ><fmt:message key="enregistrerCourt" /></button></p>
+			<p>
+			 <button type='submit' class="btn btn-lg btn-primary" ><fmt:message key="enregistrerCourt" /></button>
+			<span class="erreurfadeout">${requestScope.msgInsert}</span> 
+			 </p>
 		</form>
-		 	<span class="erreurfadeout">${requestScope.msgInsert}</span>
+		 	
 		</div>
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
